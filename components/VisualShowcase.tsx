@@ -122,12 +122,12 @@ export function VisualShowcase() {
           <div className="inline-flex items-center space-x-2 glass px-6 py-3 rounded-full mb-6 backdrop-blur-xl border border-white/10">
             <Award className="w-5 h-5 text-yellow-400" />
             <span className="text-base font-semibold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Editor's Choice
+              Editor&apos;s Choice
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 text-spacing-tight">
             <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              World's Most Beautiful
+              World&apos;s Most Beautiful
             </span>
             <br />
             <span className="text-foreground">Blog Content</span>
