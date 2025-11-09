@@ -1,5 +1,7 @@
 "use client";
 
+// Fix unescaped entities for Vercel deployment
+
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { BookOpen, Bookmark, Clock, TrendingUp, Eye, Heart, Calendar, User, Settings, Bell, X } from "lucide-react";
