@@ -1,5 +1,7 @@
 "use client";
 
+// Force rebuild for Vercel deployment
+
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { BookOpen, Users, TrendingUp, Award, ChevronLeft, ChevronRight } from "lucide-react";
