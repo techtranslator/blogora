@@ -1,0 +1,37 @@
+{
+  "HomePage": {
+    "title": "发现专家的优质内容",
+    "subtitle": "加入5000万+读者，探索10万+篇来自1万名+专家作者的优质文章。",
+    "searchPlaceholder": "搜索文章、作者、主题...",
+    "exploreArticles": "探索文章",
+    "subscribeNow": "立即订阅",
+    "premiumArticles": "优质文章",
+    "activeReaders": "活跃读者",
+    "expertAuthors": "专家作者",
+    "satisfactionRate": "满意度"
+  },
+  "Navigation": {
+    "home": "首页",
+    "articles": "文章",
+    "community": "社区",
+    "authors": "作者",
+    "subscribe": "订阅",
+    "dashboard": "仪表板"
+  },
+  "BlogPage": {
+    "title": "最新文章",
+    "allCategories": "所有分类",
+    "sortBy": "排序方式",
+    "latest": "最新",
+    "popular": "热门",
+    "searchPlaceholder": "搜索文章...",
+    "readMore": "阅读更多"
+  },
+  "Footer": {
+    "copyright": "© 2025 Blogora。保留所有权利。",
+    "about": "关于我们",
+    "contact": "联系我们",
+    "privacy": "隐私政策",
+    "terms": "服务条款"
+  }
+}

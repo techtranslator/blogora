@@ -1,0 +1,37 @@
+{
+  "HomePage": {
+    "title": "Découvrez du Contenu Premium d'Experts",
+    "subtitle": "Rejoignez plus de 1 million de lecteurs explorant plus de 10 000 articles premium de plus de 1 000 auteurs experts.",
+    "searchPlaceholder": "Rechercher des articles, des auteurs, des sujets...",
+    "exploreArticles": "Explorer les Articles",
+    "subscribeNow": "S'abonner Maintenant",
+    "premiumArticles": "Articles Premium",
+    "activeReaders": "Lecteurs Actifs",
+    "expertAuthors": "Auteurs Experts",
+    "satisfactionRate": "Taux de Satisfaction"
+  },
+  "Navigation": {
+    "home": "Accueil",
+    "articles": "Articles",
+    "community": "Communauté",
+    "authors": "Auteurs",
+    "subscribe": "S'abonner",
+    "dashboard": "Tableau de bord"
+  },
+  "BlogPage": {
+    "title": "Derniers Articles",
+    "allCategories": "Toutes les Catégories",
+    "sortBy": "Trier par",
+    "latest": "Les plus récents",
+    "popular": "Populaires",
+    "searchPlaceholder": "Rechercher des articles...",
+    "readMore": "Lire Plus"
+  },
+  "Footer": {
+    "copyright": "© 2024 Blogora. Tous droits réservés.",
+    "about": "À propos",
+    "contact": "Contact",
+    "privacy": "Politique de Confidentialité",
+    "terms": "Conditions d'Utilisation"
+  }
+}

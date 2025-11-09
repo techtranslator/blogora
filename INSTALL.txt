@@ -1,0 +1,215 @@
+================================================================================
+                    AURORA - INSTALLATION INSTRUCTIONS
+                    Ultra-Premium Website Installation
+================================================================================
+
+📋 PREREQUISITES
+--------------------------------------------------------------------------------
+Before you begin, make sure you have:
+
+1. Node.js 18 or later installed
+   Download from: https://nodejs.org/
+   
+2. A code editor (VS Code recommended)
+   Download from: https://code.visualstudio.com/
+
+3. A terminal/command prompt
+
+
+🚀 INSTALLATION STEPS
+--------------------------------------------------------------------------------
+
+STEP 1: Open Terminal/Command Prompt
+-------------------------------------
+Windows: Press Win+R, type "cmd", press Enter
+Mac: Press Cmd+Space, type "terminal", press Enter
+
+
+STEP 2: Navigate to Project Folder
+-----------------------------------
+Copy and paste this command:
+
+cd "c:/Users/BARYAL LAPTOPS/Downloads/aurora-premium"
+
+Press Enter
+
+
+STEP 3: Install Dependencies
+-----------------------------
+Copy and paste this command:
+
+npm install
+
+Press Enter
+
+⏱️ This will take 2-3 minutes. You'll see a progress bar.
+Wait until you see "added XXX packages" message.
+
+
+STEP 4: Start Development Server
+---------------------------------
+Copy and paste this command:
+
+npm run dev
+
+Press Enter
+
+⏱️ Wait 10-20 seconds until you see:
+"✓ Ready in XXXms"
+"○ Local: http://localhost:3000"
+
+
+STEP 5: Open in Browser
+------------------------
+Open your web browser and go to:
+
+http://localhost:3000
+
+🎉 You should see your website!
+
+
+================================================================================
+                            TROUBLESHOOTING
+================================================================================
+
+PROBLEM: "npm is not recognized"
+SOLUTION: Install Node.js from https://nodejs.org/
+
+PROBLEM: "Port 3000 is already in use"
+SOLUTION: Use a different port:
+npm run dev -- -p 3001
+Then open: http://localhost:3001
+
+PROBLEM: Installation fails
+SOLUTION: Delete node_modules folder and try again:
+rmdir /s node_modules (Windows)
+rm -rf node_modules (Mac/Linux)
+npm install
+
+PROBLEM: Website doesn't load
+SOLUTION: 
+1. Check if server is running (you should see "Ready" message)
+2. Try refreshing browser
+3. Clear browser cache
+
+
+================================================================================
+                        WHAT TO DO NEXT
+================================================================================
+
+1. CUSTOMIZE COLORS
+   Open: tailwind.config.ts
+   Change the color values
+
+2. UPDATE CONTENT
+   Open files in app/ folder
+   Edit the text and content
+
+3. ADD YOUR LOGO
+   Open: components/Header.tsx
+   Replace the logo section
+
+4. UPDATE CONTACT INFO
+   Open: components/Footer.tsx
+   Change email, phone, address
+
+
+================================================================================
+                        USEFUL COMMANDS
+================================================================================
+
+Start development server:
+npm run dev
+
+Build for production:
+npm run build
+
+Start production server:
+npm start
+
+Stop the server:
+Press Ctrl+C in terminal
+
+
+================================================================================
+                        FILE LOCATIONS
+================================================================================
+
+Pages (content):
+- Home: app/page.tsx
+- About: app/about/page.tsx
+- Services: app/services/page.tsx
+- Blog: app/blog/page.tsx
+- Contact: app/contact/page.tsx
+
+Components (reusable parts):
+- Header: components/Header.tsx
+- Footer: components/Footer.tsx
+- Hero: components/Hero.tsx
+- And more...
+
+Styles:
+- Global: app/globals.css
+- Config: tailwind.config.ts
+
+
+================================================================================
+                        DEPLOYMENT
+================================================================================
+
+OPTION 1: Vercel (Easiest - FREE)
+----------------------------------
+1. Create account at vercel.com
+2. Install Vercel CLI: npm install -g vercel
+3. Run: vercel
+4. Follow prompts
+5. Your site is live!
+
+OPTION 2: Netlify (FREE)
+-------------------------
+1. Create account at netlify.com
+2. Drag and drop .next folder
+3. Your site is live!
+
+OPTION 3: Manual
+----------------
+1. Run: npm run build
+2. Upload .next folder to your hosting
+3. Run: npm start on server
+
+
+================================================================================
+                        DOCUMENTATION
+================================================================================
+
+Quick Start:        QUICKSTART.md
+Full Setup:         SETUP.md
+Features List:      FEATURES.md
+Project Summary:    PROJECT-SUMMARY.md
+Main Docs:          README.md
+
+
+================================================================================
+                        SUPPORT
+================================================================================
+
+Email: hello@aurora.design
+Documentation: See files above
+Community: Next.js Discord
+
+
+================================================================================
+                    YOU'RE ALL SET! 🚀
+================================================================================
+
+Your ultra-premium website is ready to use!
+
+Next steps:
+1. ✅ Explore the website
+2. ✅ Read the documentation
+3. ✅ Customize to your needs
+4. ✅ Deploy and launch!
+
+Good luck with your project!
+
+================================================================================

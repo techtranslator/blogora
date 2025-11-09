@@ -1,0 +1,37 @@
+{
+  "HomePage": {
+    "title": "اكتشف المحتوى المميز من الخبراء",
+    "subtitle": "انضم إلى 50 مليون+ قارئ يستكشفون 100,000+ مقالة مميزة من 10,000+ مؤلف خبير.",
+    "searchPlaceholder": "البحث في المقالات، المؤلفين، المواضيع...",
+    "exploreArticles": "استكشف المقالات",
+    "subscribeNow": "اشترك الآن",
+    "premiumArticles": "مقالات مميزة",
+    "activeReaders": "قراء نشطون",
+    "expertAuthors": "مؤلفون خبراء",
+    "satisfactionRate": "معدل الرضا"
+  },
+  "Navigation": {
+    "home": "الرئيسية",
+    "articles": "المقالات",
+    "community": "المجتمع",
+    "authors": "المؤلفون",
+    "subscribe": "اشتراك",
+    "dashboard": "لوحة التحكم"
+  },
+  "BlogPage": {
+    "title": "أحدث المقالات",
+    "allCategories": "جميع الفئات",
+    "sortBy": "ترتيب حسب",
+    "latest": "الأحدث",
+    "popular": "الأكثر شعبية",
+    "searchPlaceholder": "البحث في المقالات...",
+    "readMore": "اقرأ المزيد"
+  },
+  "Footer": {
+    "copyright": "© 2025 Blogora. جميع الحقوق محفوظة.",
+    "about": "عن الموقع",
+    "contact": "اتصل بنا",
+    "privacy": "سياسة الخصوصية",
+    "terms": "شروط الخدمة"
+  }
+}

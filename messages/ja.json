@@ -1,0 +1,37 @@
+{
+  "HomePage": {
+    "title": "エキスパートによるプレミアムコンテンツを発見",
+    "subtitle": "5000万人以上の読者が、1万人以上のエキスパート著者による10万以上のプレミアム記事を探索しています。",
+    "searchPlaceholder": "記事、著者、トピックを検索...",
+    "exploreArticles": "記事を探索",
+    "subscribeNow": "今すぐ購読",
+    "premiumArticles": "プレミアム記事",
+    "activeReaders": "アクティブ読者",
+    "expertAuthors": "エキスパート著者",
+    "satisfactionRate": "満足度"
+  },
+  "Navigation": {
+    "home": "ホーム",
+    "articles": "記事",
+    "community": "コミュニティ",
+    "authors": "著者",
+    "subscribe": "購読",
+    "dashboard": "ダッシュボード"
+  },
+  "BlogPage": {
+    "title": "最新の記事",
+    "allCategories": "すべてのカテゴリ",
+    "sortBy": "並び替え",
+    "latest": "最新",
+    "popular": "人気",
+    "searchPlaceholder": "記事を検索...",
+    "readMore": "続きを読む"
+  },
+  "Footer": {
+    "copyright": "© 2025 Blogora。全著作権所有。",
+    "about": "会社概要",
+    "contact": "お問い合わせ",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約"
+  }
+}
