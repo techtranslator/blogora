@@ -3,6 +3,7 @@
 // Fix unescaped entities for Vercel deployment - final attempt
 
 import { useState, useEffect } from "react";
+import Image from 'next/image';
 import { motion } from "framer-motion";
 import { BookOpen, Bookmark, Clock, TrendingUp, Eye, Heart, Calendar, User, Settings, Bell, X } from "lucide-react";
 import Link from "next/link";
@@ -73,11 +74,15 @@ export function UserDashboard() {
           <div className="lg:col-span-1">
             <div className="glass rounded-2xl p-6 mb-6">
               <div className="flex items-center space-x-4 mb-6">
-                <img 
-                  src={mockUser.avatar} 
-                  alt={mockUser.name} 
-                  className="w-16 h-16 rounded-full object-cover"
-                />
+                <div className="w-16 h-16 rounded-full overflow-hidden">
+                  <Image 
+                    src={mockUser.avatar} 
+                    alt={mockUser.name}
+                    width={64}
+                    height={64}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <div>
                   <h2 className="font-bold text-lg">{mockUser.name}</h2>
                   <p className="text-sm text-muted-foreground">{mockUser.email}</p>
@@ -181,11 +186,15 @@ export function UserDashboard() {
                   <div className="space-y-4">
                     {readingHistoryWithPosts.slice(0, 3).map((item) => (
                       <div key={item.id} className="flex items-center space-x-4 p-4 glass rounded-xl">
-                        <img 
-                          src={item.post?.image} 
-                          alt={item.post?.title} 
-                          className="w-16 h-16 rounded-lg object-cover"
-                        />
+                        <div className="w-16 h-16 rounded-lg overflow-hidden">
+                          <Image 
+                            src={item.post?.image || '/default-post.jpg'} 
+                            alt={item.post?.title || 'Post image'}
+                            width={64}
+                            height={64}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
                         <div className="flex-1">
                           <h3 className="font-semibold line-clamp-1">{item.post?.title}</h3>
                           <div className="flex items-center space-x-4 text-sm text-muted-foreground mt-1">
@@ -264,11 +273,15 @@ export function UserDashboard() {
                   <div className="space-y-4">
                     {readingHistoryWithPosts.map((item) => (
                       <div key={item.id} className="flex items-center space-x-4 p-4 glass rounded-xl">
-                        <img 
-                          src={item.post?.image} 
-                          alt={item.post?.title} 
-                          className="w-16 h-16 rounded-lg object-cover"
-                        />
+                        <div className="w-16 h-16 rounded-lg overflow-hidden">
+                          <Image 
+                            src={item.post?.image || '/default-post.jpg'} 
+                            alt={item.post?.title || 'Post image'}
+                            width={64}
+                            height={64}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
                         <div className="flex-1">
                           <h3 className="font-semibold line-clamp-1">{item.post?.title}</h3>
                           <div className="flex items-center space-x-4 text-sm text-muted-foreground mt-1">
@@ -332,9 +345,11 @@ export function UserDashboard() {
                       >
                         <Link href={`/blog/${item.postId}`} className="block">
                           <div className="relative h-40">
-                            <img 
-                              src={item.post?.image} 
-                              alt={item.post?.title} 
+                            <Image 
+                              src={item.post?.image || '/default-post.jpg'} 
+                              alt={item.post?.title || 'Post image'} 
+                              width={400} 
+                              height={160} 
                               className="w-full h-full object-cover"
                             />
                             <div className="absolute inset-0 bg-gradient-to-br from-black/40 to-black/20" />

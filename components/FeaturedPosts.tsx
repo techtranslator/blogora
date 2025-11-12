@@ -3,6 +3,7 @@
 import { useRef, useEffect } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { Calendar, Clock, ArrowRight, User, Tag } from "lucide-react";
+import Image from 'next/image';
 import Link from "next/link";
 
 const featuredPosts = [
@@ -113,12 +114,12 @@ export function FeaturedPosts() {
               <Link href={`/blog/${post.id}`} className="block h-full">
                 {/* Image */}
                 <div className="relative h-48 overflow-hidden">
-                  <motion.img 
+                  <Image 
                     src={post.image} 
                     alt={post.title} 
+                    width={2070}
+                    height={1080}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.5 }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-br from-black/40 to-black/20" />
                   <div className="absolute top-4 left-4 px-3 py-1 bg-white/20 backdrop-blur-xl rounded-full text-white text-sm font-semibold">
@@ -146,11 +147,15 @@ export function FeaturedPosts() {
 
                   {/* Author */}
                   <div className="flex items-center space-x-3 mb-4">
-                    <img 
-                      src={post.author.avatar} 
-                      alt={post.author.name} 
-                      className="w-8 h-8 rounded-full object-cover image-hover"
-                    />
+                    <div className="w-8 h-8 rounded-full overflow-hidden">
+                      <Image 
+                        src={post.author.avatar} 
+                        alt={post.author.name}
+                        width={32}
+                        height={32}
+                        className="w-full h-full object-cover image-hover"
+                      />
+                    </div>
                     <div>
                       <p className="font-semibold text-sm">{post.author.name}</p>
                       <p className="text-xs text-muted-foreground">{post.author.role}</p>
