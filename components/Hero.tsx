@@ -185,12 +185,12 @@ export function Hero() {
           >
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full border border-blue-500/20">
               <span className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse"></span>
-              <span className="text-sm font-medium text-blue-400">World's Largest Blogging Platform</span>
+              <span className="text-sm font-medium text-blue-400">World&apos;s Largest Blogging Platform</span>
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight">
               <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                World's Largest
+                World&apos;s Largest
               </span>
               <br />
               <span className="text-foreground">Premium Blogging</span>

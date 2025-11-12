@@ -259,7 +259,7 @@ export default function AuthorProfile({ params }: { params: { id: string } }) {
           ) : (
             <div className="text-center py-16">
               <h3 className="text-2xl font-bold mb-4">No articles found</h3>
-              <p className="text-muted-foreground">This author hasn't published any articles yet.</p>
+              <p className="text-muted-foreground">This author hasn&apos;t published any articles yet.</p>
             </div>
           )}
         </motion.div>

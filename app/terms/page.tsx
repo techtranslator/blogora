@@ -31,10 +31,10 @@ export default function TermsOfServicePage() {
             <h2 className="text-2xl font-bold mb-4">Agreement to Terms</h2>
             <p className="text-muted-foreground leading-relaxed">
               These Terms of Service constitute a legally binding agreement made between you, 
-              whether personally or on behalf of an entity ("you") and Aurora Blog ("Company", "we", "us", or "our"), 
+              whether personally or on behalf of an entity (&quot;you&quot;) and Aurora Blog (&quot;Company&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;), 
               concerning your access to and use of the website as well as any other media form, media channel, 
               mobile website or mobile application related, linked, or otherwise connected thereto 
-              (collectively, the "Site").
+              (collectively, the &quot;Site&quot;).
             </p>
             <p className="text-muted-foreground leading-relaxed mt-4">
               You agree that by accessing the Site, you have read, understood, and agreed to be bound by all of these 
@@ -48,13 +48,13 @@ export default function TermsOfServicePage() {
             <p className="text-muted-foreground leading-relaxed">
               Unless otherwise indicated, the Site is our proprietary property and all source code, databases, 
               functionality, software, website designs, audio, video, text, photographs, and graphics on the Site 
-              (collectively, the "Content") and the trademarks, service marks, and logos contained therein 
-              (the "Marks") are owned or controlled by us or licensed to us, and are protected by copyright 
+              (collectively, the &quot;Content&quot;) and the trademarks, service marks, and logos contained therein 
+              (the &quot;Marks&quot;) are owned or controlled by us or licensed to us, and are protected by copyright 
               and trademark laws and various other intellectual property rights and unfair competition laws 
               of the United States, foreign jurisdictions, and international conventions.
             </p>
             <p className="text-muted-foreground leading-relaxed mt-4">
-              The Content and the Marks are provided on the Site "AS IS" for your information and personal use only. 
+              The Content and the Marks are provided on the Site &quot;AS IS&quot; for your information and personal use only. 
               Except as expressly provided in these Terms of Service, no part of the Site and no Content or Marks may 
               be copied, reproduced, aggregated, republished, uploaded, posted, publicly displayed, encoded, translated, 
               transmitted, distributed, sold, licensed, or otherwise exploited for any commercial purpose whatsoever, 
@@ -103,7 +103,7 @@ export default function TermsOfServicePage() {
             <h2 className="text-2xl font-bold mb-4">Google AdSense</h2>
             <p className="text-muted-foreground leading-relaxed">
               We use Google AdSense to display advertisements on our website. As a third-party vendor, 
-              Google uses cookies to serve ads on our site. Google's use of the DART cookie enables it to serve 
+              Google uses cookies to serve ads on our site. Google&apos;s use of the DART cookie enables it to serve 
               ads to our users based on their visit to our site and other sites on the Internet.
             </p>
             <p className="text-muted-foreground leading-relaxed mt-4">
@@ -120,7 +120,7 @@ export default function TermsOfServicePage() {
               submit, post, display, transmit, perform, publish, distribute, or broadcast content and materials 
               to us or on the Site, including but not limited to text, writings, video, audio, photographs, 
               graphics, comments, suggestions, or personal information or other material (collectively, 
-              "Contributions").
+              &quot;Contributions&quot;).
             </p>
             <p className="text-muted-foreground leading-relaxed mt-4">
               Contributions may be viewable by other users of the Site and through third-party websites. 

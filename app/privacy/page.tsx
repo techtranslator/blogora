@@ -115,7 +115,7 @@ export default function PrivacyPolicyPage() {
             <p className="text-muted-foreground leading-relaxed">
               We use Google AdSense to display advertisements on our website. 
               Google, as a third-party vendor, uses cookies to serve ads on our site. 
-              Google's use of the DART cookie enables it to serve ads to our users based on their visit to our site 
+              Google&apos;s use of the DART cookie enables it to serve ads to our users based on their visit to our site 
               and other sites on the Internet. Users may opt out of the use of the DART cookie by visiting 
               the Google ad and content network privacy policy.
             </p>

@@ -108,7 +108,7 @@ export default function BlogPage() {
             <span className="text-sm font-semibold">Premium Blogging Platform</span>
           </div>
           <h1 className="text-5xl md:text-7xl font-display font-bold mb-6">
-            World's Largest <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Blog</span> Platform
+            World&apos;s Largest <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Blog</span> Platform
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
             100,000+ premium articles from 10,000+ expert authors. Join 50M+ readers discovering insights daily.

@@ -94,10 +94,10 @@ export default function SubscribePage() {
               <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-6" />
               <h1 className="text-4xl font-display font-bold mb-4">Welcome Aboard!</h1>
               <p className="text-xl text-muted-foreground mb-8">
-                Thank you for subscribing to our newsletter. We've sent a confirmation email to <span className="text-primary">{email}</span>.
+                Thank you for subscribing to our newsletter. We&apos;ve sent a confirmation email to <span className="text-primary">{email}</span>.
               </p>
               <p className="text-muted-foreground mb-8">
-                You'll start receiving our weekly insights on design, development, and technology shortly.
+                You&apos;ll start receiving our weekly insights on design, development, and technology shortly.
               </p>
               <Link href="/">
                 <motion.button

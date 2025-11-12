@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { Hero } from "@/components/Hero";
 import { FeaturedPosts } from "@/components/FeaturedPosts";
 import { BlogCategories } from "@/components/BlogCategories";
@@ -10,7 +13,6 @@ import { ParallaxSection } from "@/components/ParallaxSection";
 import { DataVisualization } from "@/components/DataVisualization";
 import { CommunityFeatures } from "@/components/CommunityFeatures";
 import { AdSense } from "@/components/AdSense";
-import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -19,7 +21,7 @@ export default function Home() {
       <VisualShowcase />
       
       {/* Interactive Engagement Section */}
-      <motion.section 
+      <motion.div 
         initial={{ opacity: 0, y: 70 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -31,7 +33,7 @@ export default function Home() {
             Why <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Blogora</span>?
           </h2>
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-            The world's largest premium blogging platform connecting 1M+ readers with expert content.
+            The world&apos;s largest premium blogging platform connecting 1M+ readers with expert content.
           </p>
           
           <div className="grid md:grid-cols-3 gap-8 mb-16">
@@ -62,7 +64,7 @@ export default function Home() {
             Explore Our Content
           </motion.button>
         </div>
-      </motion.section>
+      </motion.div>
       
       <ParallaxSection />
       <DataVisualization />

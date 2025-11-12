@@ -54,7 +54,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-muted-foreground mb-6 max-w-sm">
-              World's largest premium blogging platform with 10,000+ articles from 1,000+ expert authors. Join 1M+ readers who trust our curated content.
+              World&apos;s largest premium blogging platform with 10,000+ articles from 1,000+ expert authors. Join 1M+ readers who trust our curated content.
             </p>
             
             {/* Stats */}

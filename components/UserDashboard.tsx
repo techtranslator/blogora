@@ -467,7 +467,7 @@ export function UserDashboard() {
                       <div className="flex-1">
                         <h3 className="font-semibold">New article published</h3>
                         <p className="text-muted-foreground text-sm mt-1">
-                          "The Future of Quantum Computing" has been published in the Technology category.
+                          &quot;The Future of Quantum Computing&quot; has been published in the Technology category.
                         </p>
                         <p className="text-xs text-muted-foreground mt-2">2 hours ago</p>
                       </div>

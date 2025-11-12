@@ -52,7 +52,7 @@ export function Header() {
               <span className="text-2xl font-display font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
                 BLOGORA
               </span>
-              <div className="text-xs text-muted-foreground -mt-1">World's Largest Blogging Platform</div>
+              <div className="text-xs text-muted-foreground -mt-1">World&apos;s Largest Blogging Platform</div>
             </div>
           </Link>
 

@@ -45,7 +45,7 @@ export function Testimonials() {
             Client <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Success Stories</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Don't just take our word for it - hear what our clients have to say
+            Don&apos;t just take our word for it - hear what our clients have to say
           </p>
         </motion.div>
 
@@ -70,7 +70,7 @@ export function Testimonials() {
 
               {/* Content */}
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                "{testimonial.content}"
+                &quot;{testimonial.content}&quot;
               </p>
 
               {/* Author */}

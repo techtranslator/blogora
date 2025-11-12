@@ -76,7 +76,7 @@ export function ParallaxSection() {
               Why Blogora Stands Out
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Discover what makes us the world's largest and most beautiful blogging platform
+              Discover what makes us the world&apos;s largest and most beautiful blogging platform
             </p>
           </motion.div>
 

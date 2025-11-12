@@ -40,7 +40,7 @@ export default function AboutPage() {
             About <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">AURORA</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground">
-            We're a team of passionate designers and developers creating premium digital experiences that inspire and convert.
+            We&apos;re a team of passionate designers and developers creating premium digital experiences that inspire and convert.
           </p>
         </motion.div>
       </section>
@@ -59,7 +59,7 @@ export default function AboutPage() {
                 Founded in 2020, AURORA emerged from a simple belief: digital experiences should be beautiful, functional, and inspiring.
               </p>
               <p>
-                We're not just building websites—we're crafting digital art installations that happen to be functional. Every project passes our "Premium Test": Would this feel at home in a luxury hotel? Would Steve Jobs approve? Does this spark joy?
+                We&apos;re not just building websites&mdash;we&apos;re crafting digital art installations that happen to be functional. Every project passes our &quot;Premium Test&quot;: Would this feel at home in a luxury hotel? Would Steve Jobs approve? Does this spark joy?
               </p>
               <p>
                 Our team brings together decades of experience from leading tech companies and design studios, united by a passion for excellence.

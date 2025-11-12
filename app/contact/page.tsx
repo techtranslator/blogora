@@ -14,7 +14,7 @@ export default function ContactPage() {
           className="text-center max-w-3xl mx-auto mb-12"
         >
           <h1 className="text-5xl md:text-7xl font-display font-bold mb-6">
-            World's <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Largest</span> Blogging Platform
+            World&apos;s <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Largest</span> Blogging Platform
           </h1>
           <p className="text-xl text-muted-foreground mb-8">
             Connecting 1M+ readers with premium content from 1,000+ expert authors. Join the future of digital publishing.
@@ -76,9 +76,9 @@ export default function ContactPage() {
             className="space-y-8"
           >
             <div>
-              <h2 className="text-3xl font-bold mb-6">Let's Talk</h2>
+              <h2 className="text-3xl font-bold mb-6">Let&apos;s Talk</h2>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Whether you have a question, a project idea, or just want to say hello, we're here to help. Fill out the form and we'll get back to you within 24 hours.
+                Whether you have a question, a project idea, or just want to say hello, we&apos;re here to help. Fill out the form and we&apos;ll get back to you within 24 hours.
               </p>
             </div>
 

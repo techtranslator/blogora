@@ -316,7 +316,7 @@ export function VisualShowcase() {
               whileHover={{ y: -10 }}
               className="glass p-6 rounded-2xl text-center backdrop-blur-xl border border-white/10 hover:shadow-xl transition-all cursor-pointer card-hover relative overflow-hidden"
             >
-              <div className="absolute inset-0 bg-cover bg-center opacity-30" style={{ backgroundImage: `url('${category.image}')` }} />
+              <div className="absolute inset-0 bg-cover bg-center opacity-30" style={{ backgroundImage: `url(&apos;${category.image}&apos;)` }} />
               <div className="absolute inset-0 bg-gradient-to-br from-black/50 to-black/30" />
               <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${category.gradient} flex items-center justify-center text-2xl mx-auto mb-4 relative z-10`}>
                 {category.icon}
