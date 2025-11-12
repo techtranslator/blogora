@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from 'next/image';
 import { BookOpen, Users, Award, TrendingUp } from "lucide-react";
 import Link from "next/link";
 
@@ -79,11 +80,15 @@ export function AuthorSpotlights() {
               <Link href={`/authors/${author.id}`} className="block">
                 {/* Background Image */}
                 <div className="relative h-40">
-                  <img 
-                    src={author.background} 
-                    alt={author.name} 
-                    className="w-full h-full object-cover"
-                  />
+                  <div className="w-full h-full relative">
+                    <Image 
+                      src={author.background} 
+                      alt={author.name} 
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover"
+                    />
+                  </div>
                   <div className="absolute inset-0 bg-gradient-to-br from-black/50 to-black/30" />
                 </div>
                 
@@ -91,11 +96,15 @@ export function AuthorSpotlights() {
                 <div className="p-6">
                   <div className="flex items-start space-x-4 mb-6">
                     <div className="relative">
-                      <img 
-                        src={author.avatar} 
-                        alt={author.name} 
-                        className="w-16 h-16 rounded-full object-cover border-4 border-white image-hover"
-                      />
+                      <div className="w-16 h-16 relative rounded-full border-4 border-white overflow-hidden">
+                        <Image 
+                          src={author.avatar} 
+                          alt={author.name}
+                          width={64}
+                          height={64}
+                          className="object-cover image-hover"
+                        />
+                      </div>
                       <div className={`absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-gradient-to-br ${author.gradient} flex items-center justify-center animate-pulse-slow`}>
                         <Award className="w-3 h-3 text-white" />
                       </div>

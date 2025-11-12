@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from 'next/image';
 import { motion } from "framer-motion";
 import { Calendar, Clock, ArrowLeft, User, Tag, Eye, Heart, Share2, Bookmark, MessageCircle, TrendingUp, ChevronDown, ChevronUp } from "lucide-react";
 import Link from "next/link";
@@ -125,11 +126,15 @@ export default function BlogPost({ params }: { params: { id: string } }) {
             {/* Meta Information */}
             <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground mb-8">
               <div className="flex items-center space-x-2">
-                <img 
-                  src={post.author.avatar} 
-                  alt={post.author.name} 
-                  className="w-10 h-10 rounded-full object-cover"
-                />
+                <div className="w-10 h-10 relative rounded-full overflow-hidden">
+                  <Image 
+                    src={post.author.avatar} 
+                    alt={post.author.name}
+                    width={40}
+                    height={40}
+                    className="object-cover"
+                  />
+                </div>
                 <div>
                   <div className="font-semibold text-foreground">{post.author.name}</div>
                   <div>{post.author.role}</div>
@@ -153,13 +158,17 @@ export default function BlogPost({ params }: { params: { id: string } }) {
             </div>
 
             {/* Article Image */}
-            <div className="rounded-2xl overflow-hidden mb-12 relative">
-              <img 
-                src={post.image} 
-                alt={post.title} 
-                className="w-full h-96 object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-br from-black/40 to-black/20" />
+            <div className="rounded-2xl overflow-hidden mb-12 relative h-96">
+              <div className="w-full h-full relative">
+                <Image 
+                  src={post.image} 
+                  alt={post.title} 
+                  fill
+                  sizes="(max-width: 768px) 100vw, 80vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-br from-black/30 to-black/10" />
             </div>
 
             {/* Article Content */}
@@ -265,11 +274,15 @@ export default function BlogPost({ params }: { params: { id: string } }) {
               className="glass p-8 rounded-2xl mb-12"
             >
               <div className="flex flex-col md:flex-row items-start space-y-6 md:space-y-0 md:space-x-6">
-                <img 
-                  src={post.author.avatar} 
-                  alt={post.author.name} 
-                  className="w-24 h-24 rounded-full object-cover"
-                />
+                <div className="w-24 h-24 relative rounded-full overflow-hidden">
+                  <Image 
+                    src={post.author.avatar} 
+                    alt={post.author.name}
+                    width={96}
+                    height={96}
+                    className="object-cover"
+                  />
+                </div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold mb-2">About {post.author.name}</h3>
                   <p className="text-muted-foreground mb-4">{post.author.bio}</p>
@@ -319,11 +332,15 @@ export default function BlogPost({ params }: { params: { id: string } }) {
                     <Link href={`/blog/${relatedPost.id}`} aria-label={`Read related article: ${relatedPost.title}`}>
                       {/* Image */}
                       <div className="relative h-32">
-                        <img 
-                          src={relatedPost.image} 
-                          alt={relatedPost.title} 
-                          className="w-full h-full object-cover"
-                        />
+                        <div className="w-full h-full relative">
+                          <Image 
+                            src={relatedPost.image} 
+                            alt={relatedPost.title}
+                            fill
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            className="object-cover"
+                          />
+                        </div>
                         <div className="absolute inset-0 bg-gradient-to-br from-black/40 to-black/20" />
                         <div className="absolute top-3 left-3 px-2 py-1 bg-white/20 backdrop-blur-xl rounded-full text-white text-xs font-semibold">
                           {relatedPost.category}

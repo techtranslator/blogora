@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Image from 'next/image';
 import { Calendar, Clock, ArrowRight, Search, Filter, User, Tag, TrendingUp, Eye, Heart, Share2, Bookmark, ChevronRight } from "lucide-react";
 import Link from "next/link";
 
@@ -339,12 +340,21 @@ export default function SubcategoryPage({ params }: { params: { category: string
       {/* Subcategory Image */}
       <section className="container mx-auto px-6 mb-16">
         <div className="rounded-3xl overflow-hidden h-96 relative">
-          <img 
-            src={subcategoryData.image} 
-            alt={subcategoryData.name} 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-black/50 to-black/30" />
+          <div className="w-full h-full relative">
+            <Image 
+              src={subcategoryData.image} 
+              alt={subcategoryData.name}
+              fill
+              sizes="(max-width: 768px) 100vw, 80vw"
+              className="object-cover"
+              priority
+            />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+          <div className="absolute bottom-0 left-0 p-8 text-white">
+            <h1 className="text-5xl font-display font-bold mb-4">{subcategoryData.name}</h1>
+            <p className="text-xl max-w-2xl">{subcategoryData.description}</p>
+          </div>
         </div>
       </section>
 
@@ -414,12 +424,15 @@ export default function SubcategoryPage({ params }: { params: { category: string
               <Link href={`/blog/${post.id}`} aria-label={`Read article: ${post.title}`}>
                 {/* Image */}
                 <div className="relative h-48">
-                  <img 
-                    src={post.image} 
-                    alt={post.title} 
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-br from-black/40 to-black/20" />
+                  <div className="w-full h-full relative">
+                    <Image 
+                      src={post.image} 
+                      alt={post.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover"
+                    />
+                  </div>
                   <div className="absolute top-4 left-4 px-3 py-1 bg-white/20 backdrop-blur-xl rounded-full text-white text-sm font-semibold">
                     {post.category}
                   </div>
@@ -448,11 +461,15 @@ export default function SubcategoryPage({ params }: { params: { category: string
 
                   {/* Author */}
                   <div className="flex items-center space-x-3 mb-4">
-                    <img 
-                      src={post.author.avatar} 
-                      alt={post.author.name} 
-                      className="w-8 h-8 rounded-full object-cover"
-                    />
+                    <div className="w-8 h-8 relative rounded-full overflow-hidden">
+                      <Image 
+                        src={post.author.avatar} 
+                        alt={post.author.name}
+                        width={32}
+                        height={32}
+                        className="object-cover"
+                      />
+                    </div>
                     <div>
                       <p className="font-semibold text-sm">{post.author.name}</p>
                       <p className="text-xs text-muted-foreground">{post.author.role}</p>
@@ -496,13 +513,16 @@ export default function SubcategoryPage({ params }: { params: { category: string
                 <Link href={`/blog/${post.id}`} aria-label={`Read article: ${post.title}`}>
                   {/* Image */}
                   <div className="relative h-48">
-                    <img 
-                      src={post.image} 
-                      alt={post.title} 
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-br from-black/40 to-black/20" />
-                    <div className="absolute top-4 left-4 px-3 py-1 bg-white/20 backdrop-blur-xl rounded-full text-white text-sm font-semibold">
+                    <div className="w-full h-full relative">
+                      <Image 
+                        src={post.image} 
+                        alt={post.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="absolute top-3 left-3 px-2 py-1 bg-white/20 backdrop-blur-xl rounded-full text-white text-xs font-semibold">
                       {post.category}
                     </div>
                   </div>
@@ -527,14 +547,18 @@ export default function SubcategoryPage({ params }: { params: { category: string
 
                     {/* Author */}
                     <div className="flex items-center space-x-3 mb-4">
-                      <img 
-                        src={post.author.avatar} 
-                        alt={post.author.name} 
-                        className="w-8 h-8 rounded-full object-cover"
-                      />
+                      <div className="w-8 h-8 relative rounded-full overflow-hidden">
+                        <Image 
+                          src={post.author.avatar} 
+                          alt={post.author.name}
+                          width={32}
+                          height={32}
+                          className="object-cover"
+                        />
+                      </div>
                       <div>
-                        <p className="font-semibold text-sm">{post.author.name}</p>
-                        <p className="text-xs text-muted-foreground">{post.author.role}</p>
+                        <p className="font-medium">{post.author.name}</p>
+                        <p className="text-sm text-muted-foreground">{post.author.role}</p>
                       </div>
                     </div>
 

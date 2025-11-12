@@ -3,6 +3,7 @@
 // Fix unescaped entities for Vercel deployment - final attempt
 
 import { useState, useEffect } from "react";
+import Image from 'next/image';
 import { motion } from "framer-motion";
 import { BookOpen, Users, TrendingUp, Award, ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
@@ -158,11 +159,15 @@ export function VisualShowcase() {
               {/* Image */}
               <div className="md:w-1/2 relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-black/40 to-black/60 z-10" />
-                <img 
-                  src={featuredContent[currentIndex].image} 
-                  alt={featuredContent[currentIndex].title}
-                  className="w-full h-80 md:h-full object-cover"
-                />
+                <div className="w-full h-80 md:h-full relative">
+                  <Image 
+                    src={featuredContent[currentIndex].image} 
+                    alt={featuredContent[currentIndex].title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                </div>
                 <div className={`absolute top-6 left-6 px-4 py-2 bg-gradient-to-r ${featuredContent[currentIndex].gradient} text-white rounded-full font-semibold text-sm`}>
                   {featuredContent[currentIndex].category}
                 </div>

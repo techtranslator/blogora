@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from 'next/image';
 import { motion } from "framer-motion";
 import { Sparkles, TrendingUp, Eye, Heart } from "lucide-react";
 import Link from "next/link";
@@ -102,11 +103,15 @@ export function AIRecommendations({ currentPostId }: { currentPostId?: number })
               <Link href={`/blog/${post.id}`} className="block h-full">
                 {/* Image */}
                 <div className="relative h-40">
-                  <img 
-                    src={post.image} 
-                    alt={post.title} 
-                    className="w-full h-full object-cover"
-                  />
+                  <div className="w-full h-full relative">
+                    <Image 
+                      src={post.image} 
+                      alt={post.title} 
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover"
+                    />
+                  </div>
                   <div className="absolute inset-0 bg-gradient-to-br from-black/40 to-black/20" />
                   <div className="absolute top-3 left-3 px-2 py-1 bg-white/20 backdrop-blur-xl rounded-full text-white text-xs font-semibold">
                     {post.category}
@@ -119,11 +124,15 @@ export function AIRecommendations({ currentPostId }: { currentPostId?: number })
                   
                   {/* Author */}
                   <div className="flex items-center space-x-2 mb-3">
-                    <img 
-                      src={post.author.avatar} 
-                      alt={post.author.name} 
-                      className="w-6 h-6 rounded-full object-cover"
-                    />
+                    <div className="w-6 h-6 relative rounded-full overflow-hidden">
+                      <Image 
+                        src={post.author.avatar} 
+                        alt={post.author.name}
+                        width={24}
+                        height={24}
+                        className="object-cover"
+                      />
+                    </div>
                     <span className="text-xs text-muted-foreground">{post.author.name}</span>
                   </div>
                   

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from 'next/image';
 import { ArrowLeft, Calendar, Clock, Eye, Heart, BookOpen, Users, Award, TrendingUp } from "lucide-react";
 import Link from "next/link";
 
@@ -127,13 +128,17 @@ export default function AuthorProfile({ params }: { params: { id: string } }) {
             <div className="flex flex-col md:flex-row items-start space-y-8 md:space-y-0 md:space-x-8">
               {/* Avatar */}
               <div className="relative">
-                <img 
-                  src={author.avatar} 
-                  alt={author.name} 
-                  className="w-32 h-32 rounded-full object-cover"
-                />
-                <div className={`absolute -bottom-2 -right-2 w-10 h-10 rounded-full bg-gradient-to-br ${author.gradient} flex items-center justify-center`}>
-                  <Award className="w-5 h-5 text-white" />
+                <div className="w-32 h-32 relative rounded-full overflow-hidden">
+                  <Image 
+                    src={author.avatar} 
+                    alt={author.name}
+                    width={128}
+                    height={128}
+                    className="object-cover"
+                  />
+                </div>
+                <div className={`absolute -bottom-2 -right-2 w-10 h-10 rounded-full bg-gradient-to-r ${author.gradient} flex items-center justify-center text-white`}>
+                  <TrendingUp className="w-5 h-5" />
                 </div>
               </div>
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from 'next/image';
 import { motion } from "framer-motion";
 import { MessageCircle, Users, TrendingUp, Calendar, Search, Filter, Heart, Bookmark, Share2, Plus, Trophy, Award } from "lucide-react";
 import Link from "next/link";
@@ -243,11 +244,15 @@ export default function CommunityPage() {
                   <Link href={`/community/${discussion.id}`} className="block p-6">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center space-x-3">
-                        <img 
-                          src={discussion.author.avatar} 
-                          alt={discussion.author.name} 
-                          className="w-12 h-12 rounded-full object-cover"
-                        />
+                        <div className="w-12 h-12 relative rounded-full overflow-hidden">
+                          <Image 
+                            src={discussion.author.avatar} 
+                            alt={discussion.author.name}
+                            width={48}
+                            height={48}
+                            className="object-cover"
+                          />
+                        </div>
                         <div>
                           <h3 className="font-semibold">{discussion.author.name}</h3>
                           <div className="flex items-center space-x-3 text-sm text-muted-foreground">
@@ -349,11 +354,15 @@ export default function CommunityPage() {
                     <div className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 text-white font-bold text-sm">
                       {user.rank}
                     </div>
-                    <img 
-                      src={user.user.avatar} 
-                      alt={user.user.name} 
-                      className="w-10 h-10 rounded-full object-cover"
-                    />
+                    <div className="w-10 h-10 relative rounded-full overflow-hidden">
+                      <Image 
+                        src={user.user.avatar} 
+                        alt={user.user.name}
+                        width={40}
+                        height={40}
+                        className="object-cover"
+                      />
+                    </div>
                     <div className="flex-1 min-w-0">
                       <h3 className="font-semibold truncate">{user.user.name}</h3>
                       <p className="text-sm text-muted-foreground">{user.points} points</p>

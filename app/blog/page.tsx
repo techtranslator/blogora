@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from 'next/image';
 import { motion } from "framer-motion";
 import { Calendar, Clock, ArrowRight, Search, Filter, User, Tag, TrendingUp, Eye, Heart, Share2, Bookmark, Loader, X, ChevronDown } from "lucide-react";
 import Link from "next/link";
@@ -326,11 +327,15 @@ export default function BlogPage() {
               <Link href={`/blog/${post.id}`} aria-label={`Read article: ${post.title}`}>
                 {/* Image */}
                 <div className="relative h-48">
-                  <img 
-                    src={post.image} 
-                    alt={post.title} 
-                    className="w-full h-full object-cover"
-                  />
+                  <div className="w-full h-full relative">
+                    <Image 
+                      src={post.image} 
+                      alt={post.title} 
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover"
+                    />
+                  </div>
                   <div className="absolute inset-0 bg-gradient-to-br from-black/40 to-black/20" />
                   <div className="absolute top-4 left-4 px-3 py-1 bg-white/20 backdrop-blur-xl rounded-full text-white text-sm font-semibold">
                     {post.category}
@@ -408,11 +413,15 @@ export default function BlogPage() {
                 <Link href={`/blog/${post.id}`} aria-label={`Read article: ${post.title}`}>
                   {/* Image */}
                   <div className="relative h-48">
-                    <img 
-                      src={post.image} 
-                      alt={post.title} 
-                      className="w-full h-full object-cover"
-                    />
+                    <div className="w-full h-full relative">
+                      <Image 
+                        src={post.image} 
+                        alt={post.title} 
+                        fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className="object-cover"
+                      />
+                    </div>
                     <div className="absolute inset-0 bg-gradient-to-br from-black/40 to-black/20" />
                     <div className="absolute top-4 left-4 px-3 py-1 bg-white/20 backdrop-blur-xl rounded-full text-white text-sm font-semibold">
                       {post.category}
@@ -439,11 +448,15 @@ export default function BlogPage() {
 
                     {/* Author */}
                     <div className="flex items-center space-x-3 mb-4">
-                      <img 
-                        src={post.author.avatar} 
-                        alt={post.author.name} 
-                        className="w-8 h-8 rounded-full object-cover"
-                      />
+                      <div className="w-8 h-8 relative rounded-full overflow-hidden">
+                        <Image 
+                          src={post.author.avatar} 
+                          alt={post.author.name}
+                          width={32}
+                          height={32}
+                          className="object-cover"
+                        />
+                      </div>
                       <div>
                         <p className="font-semibold text-sm">{post.author.name}</p>
                         <p className="text-xs text-muted-foreground">{post.author.role}</p>

@@ -237,11 +237,15 @@ export function UserDashboard() {
                       >
                         <Link href={`/blog/${post.id}`} className="block">
                           <div className="relative h-32">
-                            <img 
-                              src={post.image} 
-                              alt={post.title} 
-                              className="w-full h-full object-cover"
-                            />
+                            <div className="w-full h-full relative">
+                              <Image 
+                                src={post.image || '/default-post.jpg'} 
+                                alt={post.title} 
+                                fill
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                                className="object-cover"
+                              />
+                            </div>
                             <div className="absolute inset-0 bg-gradient-to-br from-black/40 to-black/20" />
                           </div>
                           <div className="p-4">

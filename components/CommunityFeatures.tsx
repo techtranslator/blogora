@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Image from 'next/image';
 import { 
   Users, MessageCircle, Heart, Share2, 
   Trophy, Star, Award, TrendingUp,
@@ -211,11 +212,15 @@ export function CommunityFeatures() {
                     <div className="text-2xl font-bold mb-2">
                       {index === 0 ? "🥇" : index === 1 ? "🥈" : index === 2 ? "🥉" : `#${user.rank}`}
                     </div>
-                    <img 
-                      src={user.avatar} 
-                      alt={user.name} 
-                      className="w-16 h-16 rounded-full mx-auto mb-3 object-cover"
-                    />
+                    <div className="w-16 h-16 rounded-full mx-auto mb-3 relative overflow-hidden">
+                      <Image 
+                        src={user.avatar} 
+                        alt={user.name}
+                        width={64}
+                        height={64}
+                        className="object-cover"
+                      />
+                    </div>
                     <h4 className="font-bold mb-1">{user.name}</h4>
                     <div className="text-sm text-muted-foreground">{user.points} pts</div>
                   </motion.div>

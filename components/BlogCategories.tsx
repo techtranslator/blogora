@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Image from 'next/image';
 import { BookOpen, Code, Palette, Smartphone, Search, PenTool, ChevronDown, ChevronRight } from "lucide-react";
 import Link from "next/link";
 
@@ -243,11 +244,15 @@ export function BlogCategories() {
               <Link href={`/blog/category/${category.slug}`} className="block">
                 {/* Image */}
                 <div className="relative h-40">
-                  <img 
-                    src={category.image} 
-                    alt={category.title} 
-                    className="w-full h-full object-cover"
-                  />
+                  <div className="w-full h-full relative">
+                    <Image 
+                      src={category.image} 
+                      alt={category.title} 
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover"
+                    />
+                  </div>
                   <div className="absolute inset-0 bg-gradient-to-br from-black/50 to-black/30" />
                 </div>
                 
